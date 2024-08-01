@@ -56,8 +56,8 @@ history = model.fit(X_train, y_train, epochs=100, validation_split=0.2, callback
 
 ### Training Metrics
 ```
-Epoch 7/100
-237/237 [==============================] - 1s 3ms/step - loss: 0.0941 - accuracy: 0.9707 - val_loss: 0.1056 - val_accuracy: 0.9693
+Epoch 9/100
+240/240 ━━━━━━━━━━━━━━━━━━━━ 0s 2ms/step - accuracy: 0.9728 - loss: 0.0889 - val_accuracy: 0.9713 - val_loss: 0.1019
 ```
 
 ## Results
@@ -65,18 +65,18 @@ Epoch 7/100
 ```
               precision    recall  f1-score   support
 
-      Stayed       0.98      0.98      0.98      1956
-        Left       0.91      0.91      0.91       405
+      Stayed       0.97      0.99      0.98      1996
+        Left       0.97      0.86      0.91       403
 
-    accuracy                           0.97      2361
-   macro avg       0.94      0.95      0.94      2361
-weighted avg       0.97      0.97      0.97      2361
+    accuracy                           0.97      2399
+   macro avg       0.97      0.93      0.95      2399
+weighted avg       0.97      0.97      0.97      2399
 ```
 
 ### Test Loss and Accuracy
 ```
-Test Accuracy: 0.9687
-Test Loss: 0.1098
+Test Accuracy: 0.9717
+Test Loss: 0.1077
 ```
 
 ## Contributors

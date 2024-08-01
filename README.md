@@ -1,4 +1,4 @@
-# Predicting Employee Attrition using an Artificial Neural Network (ANN)
+# Predicting Employee Attrition with Deep Learning: An Artificial Neural Network (ANN) Approach using TensorFlow
 
 **Author**: Husani Newbold
 

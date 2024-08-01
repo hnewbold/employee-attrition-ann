@@ -5,21 +5,17 @@
 **Date**: 2024-07-30
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Project Description](#project-description)
-3. [Model Structure](#model-structure)
-4. [Training the Model](#training-the-model)
-5. [Results](#results)
-7. [Contributors](#contributors)
+1. [Introduction & Project Description](#introduction--project-description)
+2. [Model Structure](#model-structure)
+3. [Training the Model](#training-the-model)
+4. [Results](#results)
+5. [Contributors](#contributors)
 
-## Introduction
-This project aims to develop an Artificial Neural Network (ANN) to predict which employees are likely to leave the company based on various factors such as tenure, salary, and working hours.
-
-## Project Description
-The goal of this project is to illustrate the power of deep learning models in extracting patterns and information using a few variables to make accurate and useful predictions. Furthermore, by using Keras Tuner, we efficiently tune this powerful model and find the best hyperparameters relatively quickly.
+## Introduction & Project Description
+The goal of this project was to illustrate the power of deep learning models in extracting patterns and information to make accurate predictions with very few variables. In order to do this, a sequential ANN model was built to predict whether or not an employee will leave a company using basic variables such as tenure, salary level, and work hours. Furthermore, by using Keras Tuner, the model was efficiently tuned to find the best hyperparameters relatively quickly.
 
 ## Model Structure
-The following model structure was used by the Keras Tuner to identify the best hyperparameters for trainin:
+The following model structure was used by the Keras Tuner to identify the best hyperparameters for training:
 
 ```python
 import tensorflow as tf

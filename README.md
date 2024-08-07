@@ -36,6 +36,9 @@ The dataset for this project was sourced from Kaggle and originates from Sailsfo
 - **department**: Department where the employee works
 - **salary**: Salary level (low, medium, high)
 
+
+<img src="ANN Feature Distributions.png" alt="ANN" width="1000" height="600"> 
+
 ## Model Structure
 The following model structure was used by the Keras Tuner to identify the best hyperparameters for training. This neural network consists of:
 

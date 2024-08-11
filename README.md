@@ -110,7 +110,7 @@ While the model performs very well, achieving a high accuracy of 97%, there are 
 
 - **Increase Training Data**: Incorporating additional labeled data can help improve the model's generalization capability, making it more robust to new, unseen data.
 - **Further Hyperparameter Tuning**: Although Keras Tuner was used to find optimal hyperparameters, exploring a broader range of hyperparameters or using different tuning algorithms might yield even better results.
-- **Regularization Techniques**: Implementing additional regularization techniques such as dropout, L1/L2 regularization, or batch normalization could help prevent overfitting and improve model generalization.
+- **Regularization Techniques**: Implementing regularization techniques such as dropout, L1/L2 regularization, or batch normalization can help prevent overfitting and improve model generalization.
   
 ## Contributors
 Husani Newbold (Author)

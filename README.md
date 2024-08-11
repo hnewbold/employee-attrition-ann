@@ -14,13 +14,15 @@
 7. [Contributors](#contributors)
 
 ## Introduction & Project Description
+### Introduction
 This project utilizes a deep learning model, specifically an Artificial Neural Network (ANN), to predict whether an employee will leave a company based on common work-related attributes such as tenure, salary level, and work hours.
 
+### Project Description
 To ensure high-quality input data, data cleaning, exploratory data analysis (EDA), and preprocessing were performed. This included checking for outliers, scaling numerical features, and encoding categorical variables. These preprocessing steps were implemented in a scikit-learn pipeline to ensure a streamlined and efficient data transformation process.
 
-Keras Tuner was used to efficiently find the best hyperparameters for the model. After tuning, the optimal model was replicated with the identified hyperparameters. The best model trained over 24 epochs, resulting in a test dataset loss of 0.10 and an accuracy of 0.97.
+Keras Tuner was employed to identify the best hyperparameters for the model efficiently. Once the optimal hyperparameters were identified, the model was replicated and trained for 24 epochs, achieving a test dataset loss of 0.10 and an accuracy of 0.97.
 
-This process demonstrated the capability of deep learning models to make accurate predictions based on a limited set of variables, proving the effectiveness of careful tuning and model selection.
+This process highlights the effectiveness of deep learning models in making accurate predictions with a limited set of variables, demonstrating the value of careful tuning and model selection.
 
 ## Dataset
 The dataset for this project was sourced from Kaggle and originates from Sailsfort Motors, an automobile company. Initially, it consisted of approximately 15,000 records. After removing duplicates, the dataset was reduced to around 12,000 records. The dataset contains the following 10 variables:
@@ -40,12 +42,7 @@ The dataset for this project was sourced from Kaggle and originates from Sailsfo
 <img src="ANN Feature Distributions.png" alt="ANN" width="1000" height="600"> 
 
 ## Model Structure
-The following model structure was used by the Keras Tuner to identify the best hyperparameters for training. This neural network consists of:
-
-- **Two hidden layers**: The number of units in each layer was chosen from a range of 32 to 512, with step increments of 32.
-- **Activation functions**: The activation functions 'relu' and 'tanh' were tried to determine the best performing model.
-- **Output layer**: A single neuron with a sigmoid activation function to output a probability of the employee leaving.
-- **Learning rates**: Different learning rates (1e-2, 1e-3, 1e-4, 1e-5) were tested to find the optimal setting for model training.
+The following model structure was used by the Keras Tuner to identify the best hyperparameters for training: 
 
 ```python
 import tensorflow as tf
@@ -72,6 +69,10 @@ def model_builder(hp):
 
     return model
 ```
+- **Two hidden layers**: Two hidden layers were selected, as is standard, to capture non-linear relationships in moderately complex datasets like this. The number of units per layer was set to range from 32 to 512, which are common lower and upper bounds for tasks of this complexity 
+- **Activation functions**: The activation functions 'ReLU' and 'tanh' were tested, as they are commonly used in classification tasks like this, to determine the best-performing model.
+- **Output layer**: A single neuron with a sigmoid activation function was used to output the probability of employee attrition, as it's standard for binary classification problems.
+- **Learning rates**: A range of learning rates (1e-2, 1e-3, 1e-4, 1e-5) was tested to find the optimal setting. This range covers both faster learning rates for quick convergence and lower rates for fine-tuned adjustment.
 
 ## Training the model
 The best model hyperparameters, determined by Keras Tuner, were loaded to train the model. Early stopping was implemented to prevent overfitting.
@@ -92,7 +93,7 @@ These results indicate that the model performs well on both the training and val
 
 ## Results
 ### Classification Report
-The classification report demonstrates the model's high performance across both categories ("Stayed" and "Left"). The model achieves an overall accuracy of 97%, indicating its effectiveness in predicting employee attrition
+The classification report demonstrates the model's high performance across all evaluation metrics for both categories ("Stayed" and "Left"). The model achieves an overall accuracy of 97%, indicating its effectiveness as a tool to predict employee attrition.
 
 ```
               precision    recall  f1-score   support
